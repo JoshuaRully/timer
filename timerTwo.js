@@ -9,4 +9,8 @@ stdin.on('data', key => {
   if (key === 'b') {
     beep();
   }
+  if (key === '\u0003') {
+    standOut.write("Thanks for using me, ciao!\n");
+    process.exit();
+  }
 });
